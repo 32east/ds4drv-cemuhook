@@ -1,5 +1,6 @@
 import socket
 import subprocess
+import time
 
 from ..backend import Backend
 from ..exceptions import BackendError, DeviceError
@@ -138,8 +139,9 @@ class BluetoothBackend(Backend):
             except BackendError as err:
                 self.logger.error("Error while scanning for devices: {0}",
                                   err)
-                return
+                time.sleep(3)
             except DeviceError as err:
                 self.logger.error("Unable to connect to detected device: {0}",
                                   err)
+                time.sleep(3)
 
