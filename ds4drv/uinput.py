@@ -223,7 +223,7 @@ create_mapping(
 create_mapping(
     "mouse", "DualShock4 Mouse Emulation",
     buttons={
-        "BTN_LEFT": "button_trackpad",
+        "BTN_TOUCH": "button_trackpad",
     },
     mouse={
         "REL_X": "trackpad_touch0_x",
